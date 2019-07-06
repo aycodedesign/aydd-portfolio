@@ -1,0 +1,24 @@
+# Ignore MAC system files
+.DS_store
+
+# Ignore Creative files
+*.ai
+*.psd
+
+# Ignore all text files
+*.txt
+*.docx
+*.ttf
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+# Ignore folderthese folders
+/logo
+/lotus-evora
+/mockup
+/ping-pong
+/VRC
