@@ -673,7 +673,7 @@ body.landing {
 	// }
 
 	@include breakpoint('<=medium') {
-		width: 100% !important;
+		width: 100%;
 	}
 }
 
@@ -1556,6 +1556,7 @@ input[type="button"],
 	&.style1 {
 		.content {
 			border-color: _palette(accent1);
+			outline: 1px solid red;
 		}
 	}
 
@@ -1793,10 +1794,13 @@ body.landing {
 		line-height: 1em;
 		font-weight: 700;
 		text-align: center;
+		z-index: 1;
+		background-image: url('images/overlay.png');
 
 		.work-description {
 			font-size: .5em;
 			font-weight: 400;
+			text-align: center;
 		}
 	}
 
@@ -2398,11 +2402,6 @@ body.is-touch {
 
 /* Small */
 
-#navPanel,
-#titleBar {
-	display: none;
-}
-
 @include breakpoint('<=small') {
 	// 481 - 736
 	$size-wrapper-pad-tb: 3.25em;
@@ -2547,19 +2546,19 @@ body.is-touch {
 		//background: _palette(accent2);
 		//box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
 
-		.title {
-			color: _palette(green);
-			display: block;
-			font-weight: _font(weight-bold);
-			height: 44px;
-			line-height: 44px;
-			text-align: center;
+		// .title {
+		// 	color: _palette(green);
+		// 	display: block;
+		// 	font-weight: _font(weight-bold);
+		// 	height: 44px;
+		// 	line-height: 44px;
+		// 	text-align: center;
 
-			a {
-				color: inherit;
-				border: 0;
-			}
-		}
+		// 	a {
+		// 		color: inherit;
+		// 		border: 0;
+		// 	}
+		// }
 
 		.toggle {
 			@include icon;
@@ -2673,6 +2672,22 @@ body.is-touch {
 	#footer {
 		padding: $size-wrapper-pad-tb $size-wrapper-pad-lr;
 	}
+
+	/*Hides Back Arrow */
+
+	#page-wrapper {
+		.left {
+			display: none;
+		}
+	}
+
+	#navPanel {
+		display: none;
+	}
+
+	.title {
+		display: none;
+	}
 }
 
 /* XSmall */
@@ -2696,6 +2711,10 @@ body.is-touch {
 		font-size: 12pt;
 	}
 
+	.main {
+		margin: 0;
+	}
+
 	/* Button */
 
 	input[type="submit"],
@@ -2710,6 +2729,9 @@ body.is-touch {
 	.spotlight {
 		.image.main {
 			max-height: 50vh;
+			margin: 0 0 2em 0;
+			position: relative;
+			top: 0;
 		}
 
 		.content {
@@ -2798,16 +2820,19 @@ body.is-touch {
 
 	/* BACK ARROW */
 
-	.back-arrow {
-		background: _palette(accent2-transparent);
-	}
+	// .back-arrow {
+	// 	background: _palette(accent2-transparent);
+	// 	display: none;
+	// }
 
 	.image {
 
 		&.fit {
 			display: block;
-			margin: 2em 0 _size(element-margin) 0;
+			// margin: 2em 0 _size(element-margin) 0;
+			margin: 2em 0 0 0;
 			width: 100%;
+			padding: 0;
 
 			img {
 				width: 100%;
@@ -2816,8 +2841,28 @@ body.is-touch {
 	}
 
 	.container {
+
+		width: 90%;
+
 		.row {
 			display: block;
+			margin: 0 auto;
+
+			h2 {
+				padding-top: 1em;
+			}
+
+			ul.icons {
+				margin-top: 8em;
+
+				a {
+					padding: inherit;
+				}
+			}
 		}
+	}
+
+	#header2 {
+		display: none;
 	}
 }
