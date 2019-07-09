@@ -1478,7 +1478,7 @@ input[type="button"],
 		display: none;
 
 		img {
-			position: relative;
+			//position: relative;
 		}
 
 		// added dark overlay for hero images
@@ -1794,8 +1794,7 @@ body.landing {
 		line-height: 1em;
 		font-weight: 700;
 		text-align: center;
-		z-index: 1;
-		//background-image: url('images/overlay.png');
+		z-index: 100;
 
 		.work-description {
 			font-size: .5em;
@@ -2842,7 +2841,16 @@ body.is-touch {
 			padding: 0;
 
 			img {
+				//position: absolute;
 				width: 100%;
+			}
+
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: .9;
+				z-index: 10;
 			}
 		}
 	}
