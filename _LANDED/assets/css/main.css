@@ -2351,7 +2351,7 @@ body.landing .dropotron.level-0 {
   max-width: 1400px;
   /*Back Arrow*/ }
   #page-wrapper p.work-title {
-    color: rgba(255, 255, 255, 0.75);
+    color: #ffffff;
     position: absolute;
     top: 3em;
     left: 50%;
@@ -2361,14 +2361,13 @@ body.landing .dropotron.level-0 {
     line-height: 1em;
     font-weight: 700;
     text-align: center;
-    z-index: 1;
-    background-image: url("images/overlay.png"); }
+    z-index: 1; }
     #page-wrapper p.work-title .work-description {
       font-size: .5em;
       font-weight: 400;
       text-align: center; }
   #page-wrapper i {
-    border: solid white;
+    border: solid rgba(255, 255, 255, 0.5);
     border-width: 0 10px 10px 0;
     display: inline-block;
     padding: 3px;
@@ -2377,7 +2376,7 @@ body.landing .dropotron.level-0 {
     position: absolute;
     top: 2em;
     left: 2em;
-    z-index: 10;
+    z-index: 10003;
     background: transparent; }
   #page-wrapper .left {
     transform: rotate(135deg);
@@ -2858,7 +2857,7 @@ body.is-touch #banner {
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     padding-bottom: 1px;
-    padding-top: 44px !important; }
+    padding-top: 0 !important; }
 
   #titleBar {
     -moz-backface-visibility: hidden;
@@ -2870,7 +2869,7 @@ body.is-touch #banner {
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     display: block;
-    height: 44px;
+    height: 0px;
     left: 0;
     position: fixed;
     top: 0;
@@ -2981,7 +2980,7 @@ body.is-touch #banner {
 
   /*Hides Back Arrow */
   #page-wrapper .left {
-    display: none; }
+    font-size: .75em; }
 
   #navPanel {
     display: none; }
@@ -3003,6 +3002,9 @@ body.is-touch #banner {
 
   .main {
     margin: 0; }
+
+  section {
+    padding-bottom: 0 !important; }
 
   /* Button */
   input[type="submit"],
@@ -3090,12 +3092,20 @@ body.is-touch #banner {
       margin: 0 auto; }
       .container .row h2 {
         padding-top: 1em; }
+      .container .row h3 {
+        padding-top: 1em;
+        padding-bottom: 3em; }
       .container .row ul.icons {
         margin-top: 8em; }
         .container .row ul.icons a {
           padding: inherit; }
+      .container .row img {
+        width: 100%; }
 
   #header2 {
-    display: none; } }
+    display: none; }
+
+  i {
+    position: fixed !important; } }
 
 /*# sourceMappingURL=main.css.map */
