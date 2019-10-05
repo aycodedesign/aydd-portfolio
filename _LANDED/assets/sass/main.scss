@@ -6,7 +6,6 @@
 @import 'libs/html-grid';
 @import url('font-awesome.min.css');
 @import url("https://use.typekit.net/yqn3drs.css");
-// @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i");
 @import url('https://fonts.googleapis.com/css?family=Jura&display=swap');
 
 
@@ -174,6 +173,7 @@ p {
 	&#copyright {
 		text-align: center;
 		font-size: .8em;
+		padding-bottom: 1em;
 	}
 }
 
@@ -775,8 +775,8 @@ header {
 
 footer {
 	position: relative;
-	padding-top: 10em;
-	bottom: 2em;
+	padding-top: 7em;
+	bottom: 1em;
 	width: 100%;
 	line-height: 1em;
 	justify-content: center;
@@ -1452,6 +1452,7 @@ input[type="button"],
 	background-size: cover;
 	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
 	height: 100vh;
+	width: 100%;
 	overflow: hidden;
 	position: relative;
 
@@ -1781,7 +1782,7 @@ body.landing {
 	padding-top: 1em;
 	height: 100%;
 	margin: 0 auto;
-	max-width: 1400px;
+	//max-width: 1400px;
 
 	p.work-title {
 		color: _palette(fg-bold);
@@ -2153,9 +2154,14 @@ body.is-touch {
 		margin-left: 15em;
 	}
 
-	.container {
-		.row {
-			display: flex;
+	.content {
+		outline: 1px red solid;
+		width: 100%;  
+
+		.container {
+			.row {
+				display: flex;
+			}
 		}
 	}
 
@@ -2654,6 +2660,8 @@ body.is-touch {
 
 	body {
 		&.navPanel-visible {
+			outline: 1px solid red;
+
 			#page-wrapper {
 				@include vendor('transform', 'translateX(#{_size(navPanel)})');
 			}
@@ -2835,7 +2843,6 @@ body.is-touch {
 
 		&.fit {
 			display: block;
-			// margin: 2em 0 _size(element-margin) 0;
 			margin: 2em 0 0 0;
 			width: 100%;
 			padding: 0;

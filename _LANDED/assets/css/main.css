@@ -101,7 +101,8 @@ p {
   vertical-align: baseline; }
   p#copyright {
     text-align: center;
-    font-size: .8em; }
+    font-size: .8em;
+    padding-bottom: 1em; }
 
 article,
 aside,
@@ -1465,8 +1466,8 @@ header.major {
 
 footer {
   position: relative;
-  padding-top: 10em;
-  bottom: 2em;
+  padding-top: 7em;
+  bottom: 1em;
   width: 100%;
   line-height: 1em;
   justify-content: center;
@@ -2068,6 +2069,7 @@ input[type="button"],
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   position: relative; }
   .spotlight:nth-last-of-type(1) {
@@ -2346,7 +2348,6 @@ body.landing .dropotron.level-0 {
   padding-top: 1em;
   height: 100%;
   margin: 0 auto;
-  max-width: 1400px;
   /*Back Arrow*/ }
   #page-wrapper p.work-title {
     color: #ffffff;
@@ -2622,8 +2623,11 @@ body.is-touch #banner {
   .main {
     margin-left: 15em; }
 
-  .container .row {
-    display: flex; }
+  .content {
+    outline: 1px red solid;
+    width: 100%; }
+    .content .container .row {
+      display: flex; }
 
   /* VERTICAL LINE */
   #vertline {
@@ -2956,21 +2960,23 @@ body.is-touch #banner {
         display: inline-block;
         width: 6.25em; }
 
-  body.navPanel-visible #page-wrapper {
-    -moz-transform: translateX(275px);
-    -webkit-transform: translateX(275px);
-    -ms-transform: translateX(275px);
-    transform: translateX(275px); }
-  body.navPanel-visible #titleBar {
-    -moz-transform: translateX(275px);
-    -webkit-transform: translateX(275px);
-    -ms-transform: translateX(275px);
-    transform: translateX(275px); }
-  body.navPanel-visible #navPanel {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
+  body.navPanel-visible {
+    outline: 1px solid red; }
+    body.navPanel-visible #page-wrapper {
+      -moz-transform: translateX(275px);
+      -webkit-transform: translateX(275px);
+      -ms-transform: translateX(275px);
+      transform: translateX(275px); }
+    body.navPanel-visible #titleBar {
+      -moz-transform: translateX(275px);
+      -webkit-transform: translateX(275px);
+      -ms-transform: translateX(275px);
+      transform: translateX(275px); }
+    body.navPanel-visible #navPanel {
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
 
   /* Footer */
   #footer {
