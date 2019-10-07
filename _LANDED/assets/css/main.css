@@ -728,6 +728,7 @@ body.landing {
         .container .row.gtr-200.gtr-uniform > * {
           padding-top: 80px; }
   .container #logo {
+    margin-bottom: 2em;
     height: 15em; }
   .container.xsmall {
     width: 17.5em; }
@@ -2623,11 +2624,8 @@ body.is-touch #banner {
   .main {
     margin-left: 15em; }
 
-  .content {
-    outline: 1px red solid;
-    width: 100%; }
-    .content .container .row {
-      display: flex; }
+  .container .row {
+    display: flex; }
 
   /* VERTICAL LINE */
   #vertline {
@@ -2666,7 +2664,6 @@ body.is-touch #banner {
     margin: 0;
     width: 25%;
     position: relative;
-    position: absolute;
     right: 25%;
     top: 40%; }
 
@@ -2685,6 +2682,9 @@ body.is-touch #banner {
   select,
   textarea {
     font-size: 11.5pt; }
+
+  .main {
+    margin-left: 18em; }
 
   /* Spotlight */
   .spotlight.top .content {
